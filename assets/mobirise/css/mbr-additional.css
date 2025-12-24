@@ -19413,13 +19413,13 @@ a {
 }
 
 /* === Background Video Base === */
-.header18 {
+.header18, .header16 {
   position: relative;
   overflow: hidden;
 }
 
 /* Video styling */
-.header18 .mbr-background-video {
+.header18, .header16 .mbr-background-video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -19432,19 +19432,20 @@ a {
 }
 
 /* Overlay */
-.header18 .mbr-overlay {
+.header18, .header16 .mbr-overlay {
   z-index: 1;
 }
 
 /* Content above video */
-.header18 .container-fluid {
+.header18, .header16 .container-fluid {
   position: relative;
   z-index: 2;
 }
 
 /* === Mobile Optimization === */
 @media (max-width: 768px) {
-  .header18 .mbr-background-video {
+  .header18, .header16 .mbr-background-video {
     transform: translate(-50%, -50%) scale(1.15);
   }
 }
+
