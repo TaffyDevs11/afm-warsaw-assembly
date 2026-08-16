@@ -1,0 +1,17 @@
+# Local environment files
+.env
+.DS_Store
+Thumbs.db
+
+# Uploaded content (keep the folders via .gitkeep, ignore what admins upload)
+assets/uploads/gallery/*
+assets/uploads/posters/*
+assets/uploads/blog/*
+assets/uploads/sermons/*
+assets/uploads/about/*
+!assets/uploads/*/.gitkeep
+!assets/uploads/.htaccess
+
+# Editor/IDE
+.vscode/
+.idea/

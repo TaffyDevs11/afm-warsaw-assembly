@@ -1,0 +1,18 @@
+# Security: this folder only ever contains uploaded images. Even though
+# handle_image_upload() in includes/functions.php already validates the
+# real MIME type of every upload, this is a defense-in-depth rule that
+# stops PHP (or other server-executed scripts) from ever running here,
+# even if a malicious file somehow ended up in this folder.
+<FilesMatch "\.(php|php\d|phtml|pl|py|cgi|asp|aspx)$">
+    Require all denied
+</FilesMatch>
+
+# Apache 2.2 fallback (Hostinger/older hosts)
+<IfModule !mod_authz_core.c>
+    <FilesMatch "\.(php|php\d|phtml|pl|py|cgi|asp|aspx)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+
+php_flag engine off
